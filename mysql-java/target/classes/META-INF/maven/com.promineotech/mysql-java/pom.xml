@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+ <!-- Industry standard for a groupId is your company spelled backwords.
+ for this example we will use promineotech.com and flip the words below -->
+  <groupId>com.promineotech</groupId>
+  <!-- we created the <artifactId> which is the name of the maven project -->
+  <artifactId>mysql-java</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- right above dependencies type in <properties> -->
+  <properties>
+	  <!-- below will set our java version to java 11 -->
+	<java.version>17</java.version>  
+  </properties>
+  
+  <!-- underneath the begining code input <dependencies> and copy and paste the dependencies
+  you want from the maven repository website -->
+<dependencies>
+	<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <version>8.0.32</version>
+</dependency>
+
+</dependencies>
+<!-- underneath <dependcies> and above project. copy and paste the compiler plugins
+from the apache maven compiler plugin website -->
+<build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.11.0</version>
+          <configuration>
+			  <!-- below will set our compiler version to java 11 -->
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+            <!-- above will set our compiler version to java 11 -->
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
+
